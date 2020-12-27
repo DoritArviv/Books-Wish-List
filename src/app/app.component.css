@@ -1,0 +1,28 @@
+
+h1{
+    text-align: center;
+}
+
+.description{
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.container{
+    margin: 0 auto;
+    /* display: grid; */
+ 
+
+ 
+}
+h1{
+    color: white;
+}
+.main-cmps{
+    display: flex;
+}
+hr{
+    border:1px  white solid;
+}
+

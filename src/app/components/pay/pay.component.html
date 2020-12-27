@@ -1,0 +1,70 @@
+<div class="container pay">
+    <p>Entert Your Details</p>
+    <form [formGroup]='frmPay' (ngSubmit)='onPay(frmPay.value)'>
+        <div class="form-group">
+            <input class="form-control" type="text" #name formControlName='name' placeholder="Full Name">
+        </div>
+        <div *ngIf="frmPay.controls['name'].invalid && (frmPay.controls['name'].dirty || frmPay.controls['name'].touched)"
+            class="alert alert-danger">
+            please Enter your Name 
+            <div *ngIf="frmPay.controls['name'].errors.required">
+                Name is required
+            </div>
+        </div>
+
+        <div class="form-group">
+            <input class="form-control" type="text" #email formControlName='email' placeholder="Email">
+        </div>
+        <div *ngIf="frmPay.controls['email'].invalid && (frmPay.controls['email'].dirty || frmPay.controls['email'].touched)"
+            class="alert alert-danger">
+            please Enter your email
+            <div *ngIf="frmPay.controls['email'].errors.required">
+                Email is required
+            </div>
+        </div>
+
+        <div class="form-group">
+            <input class="form-control" type="text" #card formControlName='card' placeholder="Card">
+        </div>
+        <div *ngIf="frmPay.controls['card'].invalid && (frmPay.controls['card'].dirty || frmPay.controls['card'].touched)"
+            class="alert alert-danger">
+            please enter your card it must be at least 16 numbers
+            <div *ngIf="frmPay.controls['card'].errors.required">
+                card number is required
+            </div>
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="text" #cvv formControlName='cvv' placeholder="CVV">
+        </div>
+        <div *ngIf="frmPay.controls['cvv'].invalid && (frmPay.controls['cvv'].dirty || frmPay.controls['cvv'].touched)"
+            class="alert alert-danger">
+            please enter your cvv it must be at least 3 numbers
+            <div *ngIf="frmPay.controls['cvv'].errors.required">
+                cvv is required
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <input class="form-control" type="date" #month formControlName='month' placeholder="month">
+            </div>
+            <div *ngIf="frmPay.controls['month'].invalid && (frmPay.controls['month'].dirty || frmPay.controls['month'].touched)"
+                class="alert alert-danger">
+                please select date from calendar 
+                <div *ngIf="frmPay.controls['month'].errors.required">
+                   date must be provided
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-2">
+            <button class="btn btn-secondary float-right ml-2" (click)='oncancel()'>cancel</button>
+            <button type="submit" [disabled]="frmPay.invalid || frmPay.pristine"
+                class="btn btn-primary float-right">confirm</button>
+
+        </div>
+    </form>
+
+
+</div>

@@ -1,0 +1,19 @@
+<div class="container bookscont overflow-auto">
+    <div class="book-details ">
+        <div class="book-title-and-checkbox" >
+            <h5 class="book-title mt-4">{{book.title}}</h5>
+            <input type="checkbox" [checked]="isInWishList" class="float-right ck" (change)="toggleWishLst.emit(book)">
+        </div>
+        <hr/>
+        <p class="book-author">by <u>{{book.author}}</u></p>
+        <p class="book-description">{{book.description}}</p>
+        <div class="rating-and-price">
+            <p>{{book.rating}} <i class="fa fa-star-o" style="color:rgb(238, 238, 25)"></i></p>
+            <p>Price: ${{book.price}}</p>
+        </div>
+        <div>
+            <a class="item-link" (click)='onShowImag(book.imag)'>see book cover</a>
+        </div>
+
+  </div>
+</div>

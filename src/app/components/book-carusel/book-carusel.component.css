@@ -1,0 +1,19 @@
+.carudel{
+    display: flex;
+}
+button{
+    background-color: Transparent;
+    outline: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    /* font-family: ZCOOL; */
+
+  }
+
+  
+@media(max-width:480px){
+    .book-carusel{
+      display: grid;
+    }
+  }

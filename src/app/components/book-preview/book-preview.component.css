@@ -1,0 +1,16 @@
+.bookscont{
+    background-color: white;
+    font-size: 16px;
+    box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
+    border-radius: 5px;
+
+}
+.book-description{
+   
+    background:rgb(180, 177, 177); 
+    border-radius: 5px;
+    
+}
+.ck{
+    margin-top: -20px;
+}

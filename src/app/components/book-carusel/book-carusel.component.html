@@ -1,0 +1,5 @@
+<div class="carudel container">
+    <button class="mr-4 bttn" (click)='onGetNextBook(-1)'>&lt;</button>
+    <app-book-preview  [x]='insexNum' [book] ="book$ |async" (toggleWishLst)='toggelWishLst($event)'></app-book-preview>
+    <button  class="ml-4 bttn" (click)='onGetNextBook(1)'>&gt;</button>
+</div>
